@@ -1,16 +1,25 @@
-using System.Collections.Generic;
+uning System;
 
 class Program
 {
     static void Main(string[] args)
     {
         Console.Write("Enter a list of numbers, type 0 when finished.");
-        int number = -1;
+        List<int> number = new List<int>();
 
-        while (number != 0)
+        int input = -1;
+
+        while (input != 0)
         {
             Console.Write("Enter number: ");
-            List<
+            string userInput = Console.ReadLine();
+
+            input = int.Parse(userInput);
+
+            if (input != 0)
+            {
+                numbers.Add(input);
+            }
         }
     }
 }
