@@ -1,10 +1,11 @@
-uning System;
+using System;
+using System.Linq;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Enter a list of numbers, type 0 when finished.");
+        Console.WriteLine("Enter a list of numbers, type 0 when finished.");
         List<int> number = new List<int>();
 
         int input = -1;
@@ -18,8 +19,16 @@ class Program
 
             if (input != 0)
             {
-                numbers.Add(input);
+                number.Add(input);
             }
         }
+
+        int sum = number.Sum();
+        double average = number.Average();
+        int largest = number.Max();
+
+        Console.WriteLine($"The sum is: {sum}");
+        Console.WriteLine($"The average is: {average}");
+        Console.WriteLine($"The largest number is: {largest}");
     }
 }
